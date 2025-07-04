@@ -1,0 +1,13 @@
+{
+    "id": "ReZeroMod",
+    "name": "ReZero Mod",
+    "author": ["Rysio1235"],
+    "description": "Adds ReZero Tarot,Planet, and Spectral cards, and some sound effects. FOR CHANGES APPLIED IN CONFIG TAB TO WORK THE GAME NEEDS TO BE RESET.",
+    "prefix": "Rcm",
+    "main_file": "ReZeroMod.lua",
+    "badge_colour": "c7638f",
+    "dependencies": [
+        "Steamodded (>=1.0.0~ALPHA-1225a)"
+    ],
+    "version": "1.0.0"
+}
