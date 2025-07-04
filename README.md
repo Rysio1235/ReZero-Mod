@@ -14,4 +14,4 @@ errors that need corection dont hasitate to reach out to me.
   - Mac: `cd ~/Library/Application Support/Balatro`
   - Linux (WINE/Proton): `cd ~/.local/share/Steam/steamapps/compatdata/2379780/pfx/drive_c/users/steamuser/AppData/Roaming/Balatro`
 - Download the mod and put it into the mods folder:
-  - Download the latest release of ReZero Mod as a .zip file and extract
+  - Download the latest version of ReZero Mod as a .zip file and extract
