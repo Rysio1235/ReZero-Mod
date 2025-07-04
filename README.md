@@ -1,10 +1,8 @@
 # ReZero Mod <a name = "rezero_mod"></a>
 
-This mod changes balatros original textures and sound to ones from 
-anime called [Re:Zero](https://rezero.fandom.com/wiki/Re:Zero_Wiki) or ones containing it (Fanart).
+This mod changes balatro's original textures and sound to those from anime called [Re:Zero](https://rezero.fandom.com/wiki/Re:Zero_Wiki) or those that contain it (fanart).
 
-This mod is still in development, if you have any sugestions or 
-errors that need corection dont hasitate to reach out to me.
+This mod is still under development, if you have any suggestions or errors that need corection dont hasitate to reach out to me.
 
 ## How to Download <a name = "how_to_download"></a>
 
