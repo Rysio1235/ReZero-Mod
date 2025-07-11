@@ -3,7 +3,7 @@
 This mod changes balatros original textures and sound to those from 
 anime called [Re:Zero](https://rezero.fandom.com/wiki/Re:Zero_Wiki) or ones containing it (Fanart).
 
-It also adds a coplue of jokers:
+It also adds a couple of jokers:
 - Return By Death
 
 This mod is still in development, if you have any sugestions or 
