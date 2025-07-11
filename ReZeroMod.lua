@@ -96,9 +96,9 @@ SMODS.Joker {
         name = 'Return By Death',
         text = {
             "Gain {X:mult,C:white} X#1# {} Mult everytime",
-			"Mr. Bones is used.",
-			"Creates Mr. Bones when",
-			"Boss Blind is selected.",
+			"{C:attention}Mr. Bones{} is used.",
+			"Creates {C:attention}Mr. Bones{} when",
+			"{C:attention}Boss Blind{} is selected.",
 			"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
         }
     },
