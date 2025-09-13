@@ -7,6 +7,38 @@ ReZeroMod.config = SMODS.current_mod.config
 
 assert(SMODS.load_file("Config_tab.lua"))()
 
+-- Colors and stuff like that
+local color_change = SMODS.Gradient({
+    key="change",
+    colours = {
+        HEX("232329"),
+        HEX("dd9237")
+    },
+	cycle = 5,
+	interpolation = 'trig'
+})
+
+
+G.C.CLRS = {
+	RBDJKR = HEX("967bb6")
+}
+
+-- https://github.com/nh6574/JoyousSpring/blob/main/src/globals.lua#L71
+local loc_colour_ref = loc_colour 
+---@diagnostic disable-next-line: lowercase-global
+function loc_colour(_c, _default)
+    if not G.ARGS.LOC_COLOURS then
+        loc_colour_ref()
+    end
+    G.ARGS.LOC_COLOURS.clr_rbd = G.C.CLRS.RBDJKR
+
+    return loc_colour_ref(_c, _default)
+end
+
+-- Mod Badge color change
+SMODS.current_mod.badge_colour = color_change
+
+-- Mr. Bones saves counter
 local cie_ref = SMODS.calculate_individual_effect
 SMODS.calculate_individual_effect = function(effect, scored_card, key, amount, from_edition)
   if key == 'saved' then
@@ -15,10 +47,10 @@ SMODS.calculate_individual_effect = function(effect, scored_card, key, amount, f
   return cie_ref(effect, scored_card, key, amount, from_edition)
 end
 
-
+-- Atlas
 SMODS.Atlas {
 	key = "jokers",
-	path = "RBD-crop.png",
+	path = "RBD-redo-x2.png",
 	px = 71,
 	py = 95
 }
@@ -30,6 +62,7 @@ SMODS.Atlas({
 	py = 32
 })
 
+-- Textures/Sounds changes
 Filename = "ReZero_Tarot-Balatro_v12.png"
 
 if ReZeroMod.config.enable_tarot_skin then
@@ -89,17 +122,33 @@ if ReZeroMod.config.enable_joker_skin then
 	}
 end
 
+if ReZeroMod.config.enable_decks_skin then
+	SMODS.Atlas{
+		key = "centers",
+		path = "ReZero_Enhancers-Sins_v5.png",
+		px = 71,
+		py = 95,
+		atlas_table = 'ASSET_ATLAS',
+		prefix_config = { key = false }
+	}
+end
 
+-- Jokers
 SMODS.Joker {
     key = 'rbdj',
     loc_txt = {
-        name = 'Return By Death',
+        name = '{C:clr_rbd}Return By Death{}',
         text = {
-            "Gain {X:mult,C:white} X#1# {} Mult everytime",
-			"{C:attention}Mr. Bones{} is used.",
+			{
 			"Creates {C:attention}Mr. Bones{} when",
 			"{C:attention}Boss Blind{} is selected.",
-			"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
+			"{C:inactive}(Must have room){}",
+			},
+			{
+			"Gain {X:mult,C:white} X#1# {} Mult everytime",
+			"{C:attention}Mr. Bones{} is used.",
+			"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+			},
         }
     },
     blueprint_compat = true,

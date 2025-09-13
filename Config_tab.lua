@@ -44,7 +44,7 @@ SMODS.current_mod.config_tab = function()
                                     })
                                 }
                             },
-							                            {
+							{
                                 n = G.UIT.R,
                                 config = { align = "cm", padding = 0.01 },
                                 nodes = {
@@ -52,6 +52,17 @@ SMODS.current_mod.config_tab = function()
                                         label = 'Enable ReZero Joker skins',
                                         ref_table = ReZeroMod.config,
                                         ref_value = 'enable_joker_skin'
+                                    })
+                                }
+                            },
+							{
+                                n = G.UIT.R,
+                                config = { align = "cm", padding = 0.01 },
+                                nodes = {
+                                    create_toggle({
+                                        label = 'Enable ReZero Deck skins',
+                                        ref_table = ReZeroMod.config,
+                                        ref_value = 'enable_decks_skin'
                                     })
                                 }
                             },
